@@ -13,12 +13,12 @@ export class DialogComponent implements OnInit {
 
   public files: Set<File> = new Set();
 
-  constructor(public dialogRef: MatDialogRef<DialogComponent>, public uploadService: UploadService) {}
+  constructor(public dialogRef: MatDialogRef<DialogComponent>, public uploadService: UploadService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   progress;
-  canBeClosed = true;
+  canBeClosed = false;
   primaryButtonText = 'Upload';
   showCancelButton = true;
   uploading = false;
@@ -29,6 +29,7 @@ export class DialogComponent implements OnInit {
     for (let key in files) {
       if (!isNaN(parseInt(key))) {
         this.files.add(files[key]);
+        this.canBeClosed = true;
       }
     }
   }
