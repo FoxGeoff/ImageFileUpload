@@ -6,3 +6,5 @@
 * Go to the server project folder and run:```node server```. You will see in the console window ```Server started```
 * Go to the client project folder and run `ng serve` for a dev server. 
 * Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+Working 4/10/2019
